@@ -38,18 +38,21 @@ ol {
 }
 
 .page {
-  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
   color: #fff; 
-  margin: 133px 30px; 
   font-family: 'Fira Sans Condensed', sans-serif; 
   font-size: 18px; 
   background-color: #1b1919; 
-  inline-size: 1200px; 
-  block-size: 100%; 
 }
 
 .content {
   display: flex; 
+  align-items: flex-end;
   gap: 30px;
   inline-size: 1140px;
 }
