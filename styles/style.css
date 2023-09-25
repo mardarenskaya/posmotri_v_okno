@@ -58,21 +58,20 @@ ol {
 }
 
 .result {
-  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .result__video-container {
   position: relative;
   inline-size: 711px;
   height: 386px;
-  margin: 0 0 11px;
 }
 
 .search-form {
   display: flex;
-  align-items: center;
-  color: #fff;
-  gap: 40px;
+  gap: 42px;
 }
 
 .result__video {
@@ -88,7 +87,6 @@ ol {
   gap: 5px;
   border: none;
   inline-size: 100%;
-  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .search-form__fieldset-title {
@@ -105,9 +103,8 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text {
-  text-decoration: underline 1px #FFF;
-  text-underline-offset: 5px;
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -121,8 +118,12 @@ ol {
   background-color: transparent;
   border-bottom: 1px solid #FFF;
   border-left: none;
-  padding: 2px 0;
   inline-size: 225px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: start;
+  width: 224px;
   color: currentColor;
   font-family: inherit;
   font-weight: inherit;
@@ -154,10 +155,12 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: block;
+  display: flex;
   border: 1px solid #FFF;
   inline-size: 19px;
   block-size: 19px;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -169,16 +172,21 @@ ol {
   margin: 1px 0 0 1px;
 }
 
+.search-form__submit-button {
+  align-self: end;
+  width: 190px;
+}
+
 .button {
+  font-family: "Fira Sans Condensed", sans-serif;
   border: 1px solid currentColor;
   cursor: pointer;
   padding: 6px 0;
   color: #fff;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
-  background-color: transparent;
-  inline-size: 100%;
+  background: none;
+  width: 100%;
 }
 
 .button:active {
@@ -226,6 +234,10 @@ ol {
   position: relative;
   overflow-y: auto;
   block-size: 298px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: baseline;
 }
 
 .content__list-item:not(:last-child) {
