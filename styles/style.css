@@ -169,7 +169,6 @@ ol {
   background-color: #FFF;
   inline-size: 15px;
   block-size: 15px;
-  margin: 1px 0 0 1px;
 }
 
 .search-form__submit-button {
@@ -236,7 +235,6 @@ ol {
   block-size: 298px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-self: baseline;
 }
 
